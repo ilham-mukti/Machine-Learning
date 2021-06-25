@@ -1,8 +1,7 @@
 # Machine-Learning
 
-1. split (stratify = $label untuk kategori)
-2. pipeline: impute, scaling, etc., pilih algoritma.
-3. GridsearchCV, Random
-4. Fit model
-5. predict
-6. evaluation
+1. Think simple + mini EDA
+2. Feature Importance
+3. Poly/Transform/Scaling
+4. Evaluation
+5. EDA
