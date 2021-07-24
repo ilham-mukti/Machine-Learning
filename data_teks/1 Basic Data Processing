@@ -1,0 +1,29 @@
+# Basic text processing
+
+Ini cuma beberapa teknik aja, ga semuanya mesti dipake, tergantung data dan tujuannya.
+
+1. Normalization: menghindari 2 hal yang maknanya sama, seperti Saya dan saya
+2. Tokonezation: menghindari token yang tidak diproses dengan baik, misalnya -> ini? halo,
+
+Memecah per kata/kalimat. word_tokenize(tex), sent_tokenize(text)
+
+3. Punctuation Removal: Membuang tanda baca.
+4. Stop words removal: kata2 yang tidak penting dan selalu muncul. Contohnya: di, yang, pada, dari, dst. Tapi tergantung juga datanya seperti apa. Biasanya define stopwordsnya manual.
+5. Stemiing: menghindari kesamaan makna karena imbuhan. Seperti pukul dan memukul
+6. Lemitisasi: mengembalikan kata ke bentuk dasarnya seperti jum'at menjadi jumat.
+
+Kalo di data images ada flatten. Nah dalam teks ada vocabulary, yaitu semua kata digabung, tapi cuma yang uniknya aja, terus data unik itu dijadiin kolom/fitur.
+
+===========================
+
+Kalo udah ada fiturnya, terus mau ngapain?
+
+BASIC
+1. Bag of Words / Term Frequency = menghitung token brp kali muncul
+2. Inverse Document Frequency = menghitung token dan dibagi dengan seluruh baris, tapi diinverse. Scr praktikal yg digunakan ialah logaritmik dr idf
+
+YANG DIPAKAI: TF-IDF
+TFIDF ialah bag of words yang kita scaling, jadi kata2nya udah dibobotin. Kata2 yang sering muncul jadi gak penting.
+
+Kelemahan TF-IDF:
+1. Kelemahan terbesar: Urutan tidak ngaruh. Solusinya bisa pake: TfidfVectorizer(ngram_range=(1,2))
