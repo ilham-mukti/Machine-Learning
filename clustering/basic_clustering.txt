@@ -1,0 +1,41 @@
+K-modes harus semuanya kategorik
+K-means harus semuanya numerik, wira menghindari kmeans 
+k-prototype, k-medoids bisa numerik dan kategorik
+
+1. K-means
+  Cara kerja Kmeans:
+  set dpr acak
+  hitung mean
+  update dpr
+  hitung mean
+  update dpr
+  dst....
+
+  Kelebihan: runningnya cepat.
+
+  Kelemahan:
+  1. Kesulitan untuk menentukan K
+  Solusinya: elbow analysis, silhouette score.
+  2. Hanya untuk data yang bisa dirata2kan (numerik)
+  Solusi: K-modes (untuk kategorik), K-Medoid (bisa mix kategorik dan numerik), K-Prototype
+  3. Bisa gagal karena tebakan awal (padahal jumlah dpr dan cluster udah tepat)
+  4. Hanya untuk data yang lineraly-separable (misahinnya cuma garis lurus, macem SVM)
+
+
+Scoring
+  1. Inertia/Elbow Analysis
+  kmeans.inertia__
+
+    ini untuk scoring yang dihitung dari:
+    1. Jarak DPR dengan member kalo bisa sekecil mungkin
+    2. Jarak DPR dengan DPR lain kalo bisa juga kecil
+
+  2. Silhouette Score, Jika ada labelnya.
+
+
+2. DBScan
+  - Otomatis menentukan jumlah cluster. Cara kerjanya melihat kepadatan data (nyebarin virus). Yang bisa diatur ialah besar-kecilnya virus (epsilon).
+
+3. Agglomerative Hierarchical Clustering (AHC)
+  - Pertama AHC menganggap bahwa seluruh data ialah cluster. Next cari 2 cluster paling dekat dan dimerge. Nah nanti tinggal kita nentuin, mau brp cluster.
+
