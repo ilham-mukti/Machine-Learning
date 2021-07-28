@@ -1,0 +1,15 @@
+Three Most Common Recommender System
+
+1. Demographic Filtering
+- Rekomendasi yang general, tidak sepenuhnya personalized (Top 50 movies Of the year, Trending Youtube/Twitter Indonesia)
+- Filter hanya berdasarkan fitur demographic seperti genre, durasi, umur, lokasi, dst.
+- Ide: Rekomendasikan apa yang secara umum disukai orang
+
+2. Content Based Filtering: https://github.com/ilham-mukti/Machine-Learning/blob/main/data_teks/Document_Similarity_Data_Tirto.ipynb
+- Rekomendasi sesuatu yang serupa -> Other movies you may like, Berita yang serupa, dst.
+- Filter menggunakan fitur yang lebih spesifik seperti sinopsis, isi berita, nama aktor/penulis, dst.
+- Ide: jika seseorang menonton X, maka dia akan direkomendasikan film yang mirip dengan X
+
+3. Collaboratif Filtering
+- Mencocokan orang dengan preferensi yang serupa -> Other People also watched
+- Tidak perli filter data apapun, hanya mencari similarity dengan yang lain.
