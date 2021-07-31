@@ -27,3 +27,17 @@ TFIDF ialah bag of words yang kita scaling, jadi kata2nya udah dibobotin. Kata2 
 
 Kelemahan TF-IDF:
 1. Kelemahan terbesar: Urutan tidak ngaruh. Solusinya bisa pake: TfidfVectorizer(ngram_range=(1,2))
+
+
+# GAMPANGNYA BEGINI
+1. Normalization
+Dinormalkan/disamakan, Halo dan halo
+
+2. Tokenization
+Penggal per kata, kalimat
+['halo', 'nama', 'saya']
+
+3. Stopwords (HARUSNYA BIKIN SENDIRI TERGANTUNG KEBUTUHAN)
+Kata2 yang sering muncul, "di, ke, dari, dan". Nah ngehapus kata itu.
+
+Dinormalkan -> Jadiin token/split (tokenization) -> Stopwords -> jadiin token yang unik sebagai fitur dan jadi tabel -> Count token
