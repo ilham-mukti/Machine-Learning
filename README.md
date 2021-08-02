@@ -26,6 +26,7 @@
 2. Fokus ke precision atau recall.
     - Fokus ke recall ketika ingin mengurangi false negatif
     - Fokus ke precision ketika ingin mengurangi false positif
+    - F1 Score ketika dua2nya penting
 
 4. Liat data yang error, cek deh ada salah input data atau engga, kalo ada drop ae
 5. Classification Report
