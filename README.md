@@ -24,8 +24,8 @@
 # Evaluation Klasifikasi
 1. Correlation_matrix untuk fitur yg numerik
 2. Fokus ke precision atau recall.
-    - Fokus ke recall ketika ingin mengurangi false negatif
-    - Fokus ke precision ketika ingin mengurangi false positif
+    - Fokus ke recall ketika ingin mengurangi false negatif, dan pake f2-score
+    - Fokus ke precision ketika ingin mengurangi false positif, dan pake f0.5-score
     - F1 Score ketika dua2nya penting
 
 4. Liat data yang error, cek deh ada salah input data atau engga, kalo ada drop ae
