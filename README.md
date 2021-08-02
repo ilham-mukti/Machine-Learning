@@ -23,10 +23,14 @@
 
 # Evaluation Klasifikasi
 1. Correlation_matrix untuk fitur yg numerik
-2. Liat data yang error, cek deh ada salah input data atau engga, kalo ada drop ae
-2. Classification Report
-3. plot_pr_curve
-4. plot_roc_curve
+2. Fokus ke precision atau recall.
+    - Fokus ke recall ketika ingin mengurangi false negatif
+    - Fokus ke precision ketika ingin mengurangi false positif
+
+4. Liat data yang error, cek deh ada salah input data atau engga, kalo ada drop ae
+5. Classification Report
+6. plot_pr_curve
+7. plot_roc_curve
 
 # Evaluation Regresi
 1. Correlation_matrix untuk fitur yg numerik
