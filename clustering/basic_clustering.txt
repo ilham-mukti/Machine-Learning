@@ -30,7 +30,7 @@ Scoring
     1. Jarak DPR dengan member kalo bisa sekecil mungkin
     2. Jarak DPR dengan DPR lain kalo bisa juga kecil
 
-  2. Silhouette Score, Jika ada labelnya.
+  2. Silhouette Score. Pertama dia ngecek average jarak antar points di cluster yang sama (ai). Terus ngecek average jarak antar points di cluster yang beda (bi). Abis itu dibandingkan, jika ai < b1, berarti bagus.
 
 
 2. DBScan
