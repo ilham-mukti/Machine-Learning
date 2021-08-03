@@ -35,6 +35,8 @@ Scoring
 
 2. DBScan
   - Otomatis menentukan jumlah cluster. Cara kerjanya melihat kepadatan data (nyebarin virus). Yang bisa diatur ialah besar-kecilnya virus (epsilon).
+  
+  Kelebihan: Bisa Handling outliers yang ada di dataset
 
 3. Agglomerative Hierarchical Clustering (AHC)
   - Pertama AHC menganggap bahwa seluruh data ialah cluster. Next cari 2 cluster paling dekat dan dimerge. Nah nanti tinggal kita nentuin, mau brp cluster.
