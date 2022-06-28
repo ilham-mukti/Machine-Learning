@@ -1,5 +1,6 @@
 https://www.youtube.com/watch?v=dUPY4CJ-lRM&ab_channel=KelasTerbuka
 
+Regresi:
 input -> fungsi -> output
 2,4,6 -> x*2 -> 4,8,12
 
@@ -11,3 +12,8 @@ jadi m-nya diotak atik supaya ketika kita masukin data baru x_test[1], maka hasi
 Supaya nanti ngeprediknya deket2 situ.
 
 Ini berarti x_train y_train harus ngecover semua yg mungkin terjadi, supaya fungsinya akurat, dan bisa diaplikasikan ke data baru nantinya.
+
+
+https://youtu.be/rKu4Csr7lVc?list=PLZS-MHyEIRo4GyZETTWzn6B-yGYSsdbzJ
+Klasifikasi:
+Kalau dalam regresi yang dicari m (gradien), dalam klasifikasi yang dicari itu w (weight).
