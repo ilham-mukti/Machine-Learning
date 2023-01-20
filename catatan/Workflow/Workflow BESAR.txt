@@ -1,0 +1,6 @@
+1. Think Simple
+2. Feature Importance
+3. Evaluation:
+ - Poly kan disaat kolom sudah sedikit
+ - Plot residual
+4. Randomsearch

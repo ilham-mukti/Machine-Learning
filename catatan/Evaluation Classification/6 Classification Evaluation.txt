@@ -1,0 +1,12 @@
+Evaluasi Klasifikasi
+
+a. Overlay/simple plot = ga kepake
+b. Classification Repot
+c. Actual vs Prediction Plot (Confusion Matrix)
+d. Receiver Operating Characteristic (ROC). Liat Scorenya aja. (Banyak yang lebih suka ini)
+e. Precision Recall-Curve (PR) (jarang dipake, krn pembacaannya susah)
+
+ROC vs PR
+1. Ga cocok kalo datanya sedikit banget
+2. Kalau datanya balance, pake accuracy, atua dua2nya bisa dipake.
+3. Kalau Imbalance, pake f1, kalau dipaksa, pakelah PR.

@@ -1,0 +1,9 @@
+
+Flow data science gojek:
+
+1. Understand business problem
+2. Understand the data
+3. Feature Engineering
+4. Modelling
+5. Productionalization
+6. Communicate Result

@@ -1,0 +1,10 @@
+
+FEATURE IMPORTANCE
+
+Ini dilakukan jika model sudah bagus:
+
+1. mean_loss_decrease (khusus yang tree base (decisionTree, RandomForest))
+2. mean_score_decrease(bisa mana aja)
+
+	from jcopml.feature_importance import mean_score_decrease
+	df_imp = mean_score_decrease(X_train, model, plot=True, topk=10)

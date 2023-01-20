@@ -1,0 +1,68 @@
+1. Metrics:
+
+METRIC => UNTUK SCORING/TOLAK UKUR, untuk mengetahui model kita udah bagus apa blm.
+LOSS => UNTUK OPTIMIZER, untuk optimisasi mencari error terkecil. Pada regresi menggunakan MSE, pada Klasifikasi menggunakan MCE (Mean Cross Entropy)
+
+Regresi pake (paling umum dipakai):
+a. R-Squared (R2) (default sklearn):
+Seberapa bagus model kita dibandingkan rata-rata semua.
+- berkisar antara -(tak hingga) sampai 1
+- paling sering dipake (selalu dipakai)
+
+b. Mean Absolute Error (MAE)
+neg_mean_absolute_error
+Rata-rata dari error yang dimutlakan.
+- Error yang dimutlakan lalu dirata-ratakan, semakin kecil semakin baik.
+- Bisa tau berapa errornya dan ngitung2 misprediksinya
+
+c. Mean Squared Error (MSE)  
+neg_mean_squared_error
+- Error yang dikuadradkan lalu dirata2kan. Semakin kecil semakin baik
+- Jarang dipakai
+
+d. Root Squared Error (MSE)
+neg_mean_squared_log_error
+- Error yang diakarin dari MSE
+- sering jg dipakai
+
+2. Optimizer (bisa Regresi maupun Klasifikasi):
+Mencari otomatis dasar dari mangkuk (mencari loss/error terkecil). Mesin otomatis mencarikan a (slope) dan b (bias) yang menghasilkan loss paling rendah.
+
+ada 2 tipe optimizer:
+1. Gradient based optimizer (memanfaatkan kemiringan).
+a. Salah satunya ialah Gradien Descent (menuruni bukit). Pake MSE
+
+
+2. Non-gradient based optimizer:
+a. Bayesian search (asal nyoba, tapi nanti tau probalitinya, kyk game kapal)
+b. GridSearch juga, tapi dia paling jelek, nyoba satu2. Tapi kali LINEAR mending pake ini, karenna parameternya dkit banget.
+C. RandomSearch
+
+3. Polynomial Regression (int) = variance. Ini juga masuk ke optimizer.
+
+Dalam Gradient Descent kan bikin model yang optimize, tapi cuma garis lurus, bagaimana misalkan kalau datanya berlikak-likuk?
+
+Semakin tinggi poly, semakin banyak lengkungan. Poly 2 lengkungan 1, Poly 3 lengkungan 2, Poly 4 lengkungan 3, dst.
+
+model = Pipeline([
+	("poly", PolynomialFeatures(5)),
+	("algo", LinearRegression())
+])
+
+4. Bias-Variance Tradeoff
+Semakin tinggi variance, maka semakin banyak lika-likunya pada data training (semakin fit), otomatis biasnya kecil. Tapi rawan overfit.
+
+Semakin rendah variance, maka semakin sedikit lika-likunya pada data training. Otomatis biasnya tinggi. Rawan underfit.
+
+5. Evaluasi Regresi
+
+a. Overlay = ga kepake
+b. Actual vs Prediction Plot
+c. Resudial Plot (sakti).
+- Jangan peduliin angka yang paling kiri
+- Yang dipeduliin, apakah bentuknya agak simetris atau engga
+problem:
+1. Unbalanced data: Gara-gara dataset kita ga balanced. Solusinya transform data
+2. Heteroscedastic: Grgr kekurangan fitur, contohnya: bisa nebak bagus harga rumah range 1-3 milliar, tapi jelek pas 4-6 milliar, bisa jadi ada fitur yg kurang atau data yang kurang (missing). Solusinya: transform, cek variabel/feature, tambah feature.
+3. Ada patternnya: Grgr datanya ada pattern tapi kita cuma nebak garis lurus. Solusi: Poly, atau ada missing variable.
+4. Pencilan (outlier), buang outlier.

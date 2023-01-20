@@ -1,0 +1,24 @@
+Correlation Matrix.
+
+Ada 2:
+1. Korelasi Antar Fitur
+- Kalo ada fitur yang berkorelasi kuat, salah satu boleh dibuang.
+
+2. Korelasi dengan TARGET
+- Kalo ada yang berkorelasi tinggi, simpen
+
+1. Pearson
+- Linear Relationship
+- Kalo di kali ada hubungannya ga, itu pearson
+- syarat: berdistribusi normal
+
+2. Spearman (tdk seharusnya dipake di ML)
+- Rank Relationship
+- Syarat: Subyek yang berbeda
+- Contoh: nilai yang diberikan oleh Guru A vs Guru B
+- Contoh: Harga saham A vs Harga saham B
+
+3. Kendall (tdk seharusnya dipake di ML)
+- Rank Relationship
+- Syarat: Subyek yang sama
+- Contoh: Korelasi nilai quiz vs nilai ujian murid A

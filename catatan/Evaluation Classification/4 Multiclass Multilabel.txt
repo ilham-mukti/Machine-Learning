@@ -1,0 +1,21 @@
+1. Multiclass (Softmax):
+Cat vs Fish vs Dog
+Pilih salah satu
+cat 87%
+fish 3%
+dog 10%
+
+a. Caranya gabisa pake sigmoid, karena sigmoid cuma binary (0 dan 1). Solusinya tetep pake sigmoid, tapi menggunakan:
+- One vs rest/all (multi_class='ovr' di algoritma logistic regresiion)
+- Multinomial (multi_class='multinomial')
+- One vs one (JARANG DIPAKE GRGR GA EFISIEN)
+
+b. Softmax/multinomial = bisa pake 3 class langsung, dan otomatis mengeluarkan output dalam 100%. Di DL kbykn pake ini.
+
+2. Multilabel (belakangnya Sigmoid):
+Bisa lebih dari 1,
+cat 95%
+fish 95%
+dog 3%
+
+Dari segi data, kalau multilabel Y nya kyk onehot

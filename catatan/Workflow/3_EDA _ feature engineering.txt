@@ -1,0 +1,43 @@
+EDA:
+
+EDA adalah salah satu cara improve model melalui data. Dalam EDA ini kita mencari insight dan mempelajari data lebih dalam.
+
+1. Analisis target (y):
+	- data['Survived'].value_counts() -> Cek, ada imbalance ga. Kalo ada imbalance, acuraccy gabisa dipakai. Ganti jadi scoring='f1'.
+
+	- Untuk lebih akurat, pake confusion_matrix
+		from jcopml.plot import plot_confusion_matrix
+		plot_confusion_matrix(X_train, y_train, X_test, y_test, model)
+
+2. Numeric vs Target:
+	- pakai histogram:
+
+	plt.figure(figsize=(7,6))
+	sns.distplot(df.Age[df.Survived == 0], bins=[0, 5, 12, 18, 40, 120], color='r', label='not survive')
+	sns.distplot(df.Age[df.Survived == 1], bins=[0, 5, 12, 18, 40, 120], color='g', label='survive')
+	plt.legend();
+
+3. Categorical/Ordinal vs Target:
+	- pakai count
+
+	cat_var = ['Pclass', 'Sex', 'Parch', 'SibSp', 'Embarked']
+fig, axes = plt.subplots(2, 3, figsize=(15, 10))
+
+for cat, ax in zip(cat_var, axes.flatten()):
+  sns.countplot(cat, data=datas, hue='Survived', ax=ax)
+
+===========================================================
+
+FEATURE ENGINEERING
+
+Setelah mengetahui karakteristik data pada saat EDA, baru lah dilakukan feature engineering untuk improve model.
+
+1. Menambahkan Fitur
+	df['isAlone'] == (df.SibSp = 0) & (df.Parch) == 0)
+
+2. Binning
+	df.Age = pd.cut(df.Age, bins=[0, 5, 12, 18, 40, 120], labels=['balita', 'anak-anak', 'remaja', 'dewasa', 'lansia']
+
+	HATI-HATI, RUNNYA SEKALI AJA, KARENA INPLACE
+
+===========================================================

@@ -1,0 +1,35 @@
+Classification Metrics.
+
+KLASIFIKASI PERTAMA HARUS DICEK LABELNYA BALANCE ATAU ENGGA. Scoring kalo balance biarin default aja, kalau engga balance, pake F1
+
+METRIC => UNTUK SCORING/TOLAK UKUR, untuk mengetahui model kita udah bagus apa blm.
+LOSS => UNTUK OPTIMIZER, untuk optimisasi mencari error terkecil. Pada regresi menggunakan MSE, pada Klasifikasi menggunakan MCE (Mean Cross Entropy)
+
+
+False Positive
+- Ngomongnya Hamil, padahal engga.
+
+False Negative
+- Ada kata tidaknya
+- Ibu Tidak Hamil, padahal hamil
+
+UNTUK DATA YANG IMBALANCED:
+
+1. Precision (biasanya engga dipakai):
+target: precision setinggi mungkin, FP sekecil mungkin.
+
+- klasifikasi email spam vs non spam
+- kebanyakan email kita adalah tidak spam
+- akan fatal kalau email biasa tapi kita anggap spam (False Positive)
+
+2. Recall (biasanya engga dipakai):
+target: FN sekecil mungkin
+
+- klasifikasi kanker vs non kanker
+- kebanyakan label kita tidak kanker
+- akan fatal kalau kanker tapi kita anggap tidak kanker (False Negative).
+
+3. F1-Score (INI YANG BIASANYA DIPAKAI):
+- rata-rata harmonik dari precision dan recall
+- kapan dipakai? kalau mau balance antara precision dan recall
+

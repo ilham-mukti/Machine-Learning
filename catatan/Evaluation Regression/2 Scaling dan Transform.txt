@@ -1,0 +1,28 @@
+SCALING, TRANSFORM
+
+A. Scaling
+Keuntungan:
+- Distance lebih balance
+- Membantu Gradient Descent/optimizer untuk menemukan loss terkecil
+- Koenfisien regresi lebih balance.
+
+1. Standard Scaling
+- Geser ke 0
+- std 1
+
+kelemahannya: kalau data skew (condong). Artinya, syarat make ini ialah data berdistribusi normal. Kalau data tdk normal, solusinya ialah transform.
+
+Transform.
+Dipangkatkan, tapi pangkat kecil aja, like 0.1, 0.3
+
+1. Box-Cox, khusus input data yang positif
+2. Yeo-Johnson, bisa positif dan negatif
+
+
+2. MinMax Scaler
+- Geser ke 0 sampe 1
+Kelemahannya: kalau ada outlier. Solusinya Robust Scaler
+
+3. Robust Scaler
+- Menyelesaikan masalah di minmax scaler
+- dia ngambil dari quantilenya.

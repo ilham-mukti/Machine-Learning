@@ -1,0 +1,9 @@
+Optimizer pada ML berguna untuk mencari loss/error terkecil scr otomatis agar mesin termodelkan sesuai data.
+
+Setidaknya ada 2 tipe optimizer:
+1. Gradient based (memanfaatkan kemiringan). Contohnya gradient descent.
+2. Non-Gradiend based. (tdk memanfaatkan kemiringan). Contohnya Grid Search, Random Search.
+
+Pada gradient descent, mesin otomatis mencarikan slope (a) dan bias (b) yang menghasilkan loss paling kecil. Tp gmn kalo datanya engga cuma lurus? bisa ditambahin Poly. Semakin besar Poly, maka semakin fit dengan data training, artinya rawan overfit. 
+
+Untuk mensiasatinya, kita overfitin dulu model kita pake Poly, kemudian dikasih regularization/punishment menggunakan: L1/Lasso, L2/Ridge, atau gabungan dari itu ElasticNet.

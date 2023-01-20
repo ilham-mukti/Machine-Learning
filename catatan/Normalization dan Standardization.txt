@@ -1,0 +1,13 @@
+Normalization: bikin skala data jadi 0-1, biasanya pake minmax
+
+Standardization: bikin data based on standard distribution, dimana mean=0, std=1. Biasanya pake standard scaler.
+
+Kapan harus gunain normalization?
+- Biasanya di deep learning
+- Atau pada kasus2 yg butuh scaling dari 0-1
+
+Kapan harus gunain standardization?
+- Mostly di ML gunain ini (dalam artian bkn normalization itu buruk)
+
+https://www.youtube.com/watch?v=mnKm3YP56PY&ab_channel=KrishNaik
+

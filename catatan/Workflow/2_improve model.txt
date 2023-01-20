@@ -1,0 +1,24 @@
+Improve Score/Acuraccy:
+
+1. Improve melalui data (feature engineering):
+	a. Scaling: minmax, standard, robust.
+	b. Conversion:
+		- categorical to numerical
+		- numerical to categorical
+
+	c. Feature Transformation
+		- logaritmik
+		- pangkat
+		- trigonometrik
+
+	d. Adding Feature (menambahkan fitur baru)
+	e. Reducing feature (feature importance/membuang fitur)
+	f. Text data:
+		- Flattening
+		- Filtering
+		- Chunking
+
+2. Improve melalui model:
+	a. tuning hyperparameter
+	b. ganti model
+

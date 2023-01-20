@@ -1,0 +1,46 @@
+Think Simple:
+
+1. Import data
+2. Missing Value
+	Cara ngecek:
+	- Jcopml => plot_missing_value
+	- Pandas => pd.isnull(datas['features']), pake set
+
+	a. Jika tidak ada yang kosong, yaudah.
+	b. Jika ada yang kosong: di tahap Preprocessor diselesaikan.
+
+	JANGAN DIISI PADA TAHAP INI, DIISI SETELAH SPLITTING, UNTUK MENGHINDARI DATA LEAKAGE
+
+2. Dataset Splitting
+	Kalo label kategorik pake stratify=y
+
+3. Preprocessor
+	Step:
+	1. Pipeline (pisahin data numerik dan kategorik)
+		a. Isi data yang kosong:
+			ngisi pake fillna atau SimpleImputer
+
+			- Numerik: mean
+			- Kategorik: most_frequent
+
+		b. Scalling (data numerik):
+			- MinMaxScaler
+			- StandardScaler
+
+		c. Encode (data kategorik):
+			- OneHotEncoder
+			- OrdinalEncoder
+
+	2. ColumnTransformer:
+	- KALO LANGSUNG PAKE num_piple(), atau cat_pipe(encoder='onehot').
+	- Kalo engga, ya diisi sama numerical, and categorical pada step 1.
+
+	3. Pipeline = gabung preprocessor dan algoritma
+
+4. Training
+	a. Pilih: 
+		- GridSearchCV
+		- Randomize
+
+	b. Tuning Param
+	c. model.score

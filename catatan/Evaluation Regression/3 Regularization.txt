@@ -1,0 +1,15 @@
+Regularization/cambuk/hukuman.
+
+
+Kasih penalty pada weight dengan cara menambahkan weight pada loss. Tujuannya ngebalancing koefisien.
+
+Overfitin dulu pake poly, baru nanti dikasih penalty/regulariz. Artinya, ini ngurangin overfit yang telah dilakukan poly
+
+
+*Ada 2:
+1. L1/Lasso/Sparsity, dimutlakan. Cambuknya lebih sakit. Cocok untuk feature importance.
+2. L2/Ridge/Simplicity, dikuadratkan. Cambuknya lebih pelan. Umumnya pake ini.
+3. Elasticnet, gabungan dari L1 dan L2.
+
+
+*Untuk Linear Regression aja.

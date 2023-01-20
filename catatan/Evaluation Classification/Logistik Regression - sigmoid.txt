@@ -1,0 +1,6 @@
+Sigmoid, nama lainnya ialah regresi logistik:
+
+Bagaimana klasifikasi diselesaikan melalui regresi? ADA, YAITU SIGMOID. Bentuknya kyk s.
+
+Memanfaatkan regresion untuk classification, perhitungan loss menggunakan MCE.
+

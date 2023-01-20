@@ -1,0 +1,16 @@
+Asosiasi Matrix. Mirip Korelasi, tapi untuk kategori.
+
+Ada:
+1. Cramer's V
+2. Profiency
+3. Symmetric Pro
+
+from jcopml.plot import plot_blablablaa
+
+
+Korelasi ratio:
+from jcopml.plot import plot_correlation_ration
+
+Untuk mencari korelasi antara featrue numerik tapi target kategorik, atau sebaliknya. Dengan menggabungkan korelasi pada regresi dan asosiasi pada kategorik.
+
+ 

@@ -1,0 +1,18 @@
+Ensemble
+
+Memanfaatkan banyak model, terus dijadiin satu:
+conthnya:
+1. Random forest
+
+
+Boosting.
+Prinsipnya: Memanfaatkan weak learner menjadi good learner. Ga hanya tree based.
+Ada: adaptive boosting (1 decision, belajar dari kesalahan), gradient boosting (golf, menjadikan error sbg data untuk memperkecil loss)
+
+Bagging
+Prinsipnya: Memanfaatkan strong learner kemudian menjadi good learner. Model bagus (overfit) -> kemudian diturunin supaya good learner
+
+
+Algoritma Boosting:
+- XGBoost pada dasarnya ia adalah gradient boosting, cuma di optimisasi dan penambahan teknik2 untuk menghandle overfit.
+
