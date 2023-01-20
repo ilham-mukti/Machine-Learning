@@ -1,0 +1,10 @@
+Video 3-3
+
+Optimizer, 2 tipe. Gradien Descent dan Non-Gradient Descent. y = ax + b. Pakai mesin untuk mencari a dan b, dengan melihat error/loss terkecil.
+
+Kelemahan Gradient Descent
+
+1. Minima, Gimana kalau lembahnya ada 2?
+2. Plateau, dataran yang datar, sehingga dikira udah paling bawah.
+3. Saddle Points, pelana kuda (di DL kebanyakan problemmnya ini)
+4. Loss planenya sempit, solusinya scaling.

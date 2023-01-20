@@ -1,0 +1,3 @@
+Grid Search CV = nyoba satu2 a.k.a berat banget, ga cocok kalo hyperparameternya byk.
+Bayesian Search CV = nyoba dengan probability, kyk permainan battleship. Ini lumayan berat.
+Randomized Search CV = Nyoba scr random di rentang tertentu. Ini paling enteng.

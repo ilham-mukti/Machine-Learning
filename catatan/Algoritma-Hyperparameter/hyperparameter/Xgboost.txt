@@ -1,0 +1,12 @@
+XGBoost
+
+from xgboost import XGBRegressor
+from jcopml.tuning.space import Integer, Real
+
+subsample = misal dari 1000 data, cuma ambil 800 data
+colsample_bytree = Misal ada 10 kolom, kita cuma ambil 7 kolom  
+gamma = min_impurity_decrease = min_samples_leaf = minimal ada brp data pada daun, minimal error pada brp daun
+
+regularization: kurangin overfit
+reg_alpha: regularization
+reg_lambda: regularization

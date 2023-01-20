@@ -1,0 +1,27 @@
+
+Random Forest
+
+- n_estimators: more averaging, semakin banyak, semakin underfit
+- min_samples_split: Semakin tinggi, semakin underfit
+- min_impurity_decrease: semakin tinggi, semakin underfit
+- min_samples_leaf: semakin tinggi, semakin underfit.
+- max_features: mengambil fitur secara acak, semakin tinggi, semakin overfit
+- max_depth: more branch/garis decision, semakin tinggi, semakin overfit
+
+
+Rekomendasi Wira
+{'algo__n_estimators': [100, 150, 200],
+ 'algo__max_depth': [20, 50, 80],
+ 'algo__max_features': [0.3, 0.6, 0.8],
+ 'algo__min_samples_leaf': [1, 5, 10]}
+
+{'algo__n_estimators': [100, 150],
+ 'algo__min_samples_leaf': [4, 5],
+ 'algo__max_depth': [20, 25, 30]
+}
+
+BRI
+{'algo__max_depth': 61,
+ 'algo__max_features': 0.3901837289627721,
+ 'algo__min_samples_leaf': 14,
+ 'algo__n_estimators': 168}

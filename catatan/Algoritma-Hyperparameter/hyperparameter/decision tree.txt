@@ -1,0 +1,14 @@
+Decision Tree, ga cocok time series/datanya naik terus.
+
+1. Gaperlu scaling
+2. Rentan overfit
+
+
+tuning:
+1. Depth: ngebelah menjadi brp cabang?. Semakin besar semakin overfit
+2. Leaf: minimum sampel di daun, batas sampel bawah. Jangan kebanyakan, semakin byk semakin underfit
+3. Feautures: mengacak variabel dipercabangan supaya ga overfit. Klo kita tentuin max_features 50%, maka disetiap cabang yg dicek hanya 50% variabel
+
+Ini bkn tuning:
+3. Bootstrap: mengambil acak data dan mengembalikan supaya ga overfit. Scr statistik yg keambil cuma 60-70%
+4. n_estimators, Bagging/bootstrap aggregating: nambahin pohon, kemudian pohon itu mempelajari data yang dibuang bootstrap. Abis itu dibuat rata2. Ini dinamakan Random Forest
